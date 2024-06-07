@@ -1,6 +1,6 @@
 import { LitElement, css, html } from "lit";
 
-export class Gallery extends LitElement {
+export class Expand extends LitElement {
 
 static properties = {
     isOpen: { type: Boolean }
@@ -44,4 +44,4 @@ static properties = {
         this.isOpen = !this.isOpen;
     }
 }
-customElements.define('gallery-expand', Gallery);
+customElements.define('gallery-expand', Expand);

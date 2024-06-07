@@ -44,7 +44,7 @@ const menu: (MenuItem | MenuDropdown)[] = [
       {menu.map(({link, title, children}) => (
         link
           ? <NavItem link={link} title={title}/>
-          : <NavDropdown title={title} children={children}>
+          : <NavDropdown title={title}>
               {children.map(child => (<NavItem link={child.link} title={child.title}/>))}
             </NavDropdown>
       ))}

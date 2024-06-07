@@ -6,7 +6,7 @@ interface Props {
         title: string
     };
 }
-const { title, email = 'customerservice@execu-print.com' } = Astro.props.frontmatter;
+const { title, email = 'customerservice@execu-print.com' } = Astro.props.frontmatter & { email: string };
 ---
 
 <Layout title={title}>
