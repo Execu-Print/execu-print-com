@@ -1,0 +1,41 @@
+---
+layout: ../layouts/MarkdownLayout.astro
+title: ARTWORK GUIDELINES & REQUIREMENTS
+author: Aris Husanu
+description: Find out what makes Astro awesome!
+
+---
+import { Image } from 'astro:assets';
+import rasterVector from '/src/img/raster-vector.jpg';
+import bleed from '/src/img/bleed.jpg';
+
+## Bleed and Crop Marks
+Anytime you need a product to print to the edge, the artwork needs to have a bleed.
+
+Bleed is setup by extending any images or colors past the finished cut size by at least .25″. Crop marks are then placed to show exactly where the piece needs to be trimmed, and any text or important information is kept at least .15″ from the edge internally. This allows some wiggle room when the print is cut down in stacks, and protects any important details from being cutoff, or white space appearing on the edge of the print.
+
+An example of a bleed setup is illustrated here:
+
+
+<Image src={bleed} alt="Artwork with a bleed" />
+
+Notice the background color and mountain graphic both extend past the finished cut size, and all text is at least .15″ away from the edge, within the “Safe Print Area”. This is a perfect example of artwork setup to bleed.
+
+## Raster vs. Vector Images
+When considering the need for durability, longevity, and editability, it’s important to know the difference between raster and vector images.
+
+Raster images are anything made up of a definitive amount of pixels (or ppi) that makes up a specific resolution. This includes any file formatted as a .jpg, .png, .gif, and more. Raster images are created at specific resolution ranges, and they lose quality as they are scaled up or stretched. They’re also generally locked or flattened and can no longer be edited or altered other than from their original native file (Photoshop .psd ect.).
+
+Vector images are not bound by resolution and are ideal for future editing and manipulation. They can be stretched and scaled infinitely for all kinds of media. They’re generally formatted as .eps, .ai, and sometimes .pdf files. We highly recommend creating any logos or important artwork in this format.
+
+An example of the visual differences of this is shown here:
+
+<Image src={rasterVector} alt="Artwork with a bleed" />
+
+As you can see, the raster format image loses resolution as it increases in size, while the vector image retains its high resolution.
+
+This is important to know when needing any large scale prints, like posters, signs, or vehicle graphics, as most raster images will become blurry and unusable when stretched to those sizes.
+
+Very often, customers do not have access to vector versions of their artwork, which in many cases we are able to re-create those graphics into a vector format.
+
+If you need any logos or artwork re-created, feel free to [contact us](/contact-us), or visit our [“Design Page”](/design) for more information.

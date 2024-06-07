@@ -1,0 +1,23 @@
+---
+import {Gallery} from '../components/expand';
+import { Image } from 'astro:assets';
+const { alt, height = 175, path } = Astro.props;
+
+const allImages = await Astro.glob('/src/img/**/*.jpg');
+
+const images = allImages.filter(img =>img && img.default && img.default.src && img.default.src.includes(path));
+
+---
+
+<div class="gallery">
+    {images.map((img, idx) => (
+        <Gallery class="gallery-item" client:load>
+            <div slot="target" class="gallery-target">
+                <Image src={img.default} alt={`alt ${idx + 1}`} height={height}/>
+            </div>
+            <div slot="expand">
+                <Image src={img.default} alt={`alt ${idx + 1}`} />
+            </div>
+        </Gallery>
+    ))}
+</div>

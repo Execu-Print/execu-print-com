@@ -1,0 +1,33 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+	frontmatter: {
+        title: string
+    };
+}
+const { title, email = 'customerservice@execu-print.com' } = Astro.props.frontmatter;
+---
+
+<Layout title={title}>
+    <div class="markdown-content">
+        <h1>{title}</h1>
+        <hr/>
+        <slot/>
+        <div class="contact-info">
+            <h3>Contact us for a quote today!</h3>
+            <h3>Phone: <a href="tel:262-367-0390">262-367-0390</a></h3>
+            <h3>Email: <a href={email}>{email}</a></h3>
+        </div>
+    </div>
+</Layout>
+<style lang="scss">
+    .markdown-content {
+        max-width: 800px;
+        margin: auto;
+    }
+    .contact-info {
+        margin: auto;
+        text-align: center
+    }
+</style>

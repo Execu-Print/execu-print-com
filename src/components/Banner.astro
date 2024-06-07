@@ -1,0 +1,21 @@
+---
+import '../styles/components/Banner.scss';
+import Nav from './Nav.astro'
+import { Image } from 'astro:assets';
+import logoImage from '../img/logo.png';
+---
+
+<div class="banner">
+    <div class="banner-content">
+        <div class="banner-img">
+            <a href="/"><Image src={logoImage} alt="Execu Print" /></a>
+        </div>
+
+        <div class="banner-nav">
+            <Nav></Nav>
+        </div>
+
+    </div>
+
+</div>
+<div class="banner-border"></div>

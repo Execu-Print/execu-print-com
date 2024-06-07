@@ -1,0 +1,51 @@
+---
+import '../styles/components/Nav.scss';
+import NavItem from './NavItem.astro';
+import NavDropdown from './NavDropdown.astro';
+
+interface MenuItem {
+  link: string;
+  title: string;
+}
+
+interface MenuDropdown {
+  title: string;
+  children: MenuItem[]
+}
+
+const menu: (MenuItem | MenuDropdown)[] = [
+  { title: 'Contact Us', link: '/contact-us'},
+  { title: 'Quotes & Pricing', link: '/quotes'},
+  {
+    title: 'Apparel',
+    children: [
+      { title: 'Apparel', link: '/apparel'},
+      { title: 'Live Online Catalog', link: 'https://www.sportswearcollection.com/?site=MOMFKQOXOL'}
+    ]
+  },
+  { title: 'Printing', link: '/printing'},
+  {
+    title: 'Sinage',
+    children: [
+      { title: 'Signs', link: '/signs-banners'},
+      { title: 'Interior Signage', link: '/interior-signage'},
+      { title: 'Outdoor Signage', link: '/outdoor-signage'},
+      { title: 'Banners', link: '/banners'}
+    ]
+  },
+  { title: 'Vehicle Graphics', link: '/vehicle'},
+  { title: 'Design', link: '/design'},
+];
+---
+
+<nav aria-label="Main Navigation">
+    <ul>
+      {menu.map(({link, title, children}) => (
+        link
+          ? <NavItem link={link} title={title}/>
+          : <NavDropdown title={title} children={children}>
+              {children.map(child => (<NavItem link={child.link} title={child.title}/>))}
+            </NavDropdown>
+      ))}
+    </ul>
+  </nav>

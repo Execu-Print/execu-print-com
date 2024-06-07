@@ -1,0 +1,17 @@
+---
+const { title } = Astro.props;
+---
+
+<li class="dropdown">
+    <button type="button" class="dropdown__title" aria-expanded="false" aria-controls="sweets-dropdown">
+      {title}
+    </button>
+    <ul class="dropdown__menu" id="sweets-dropdown">
+      <!-- <li><a href="/apparel">Apparel</a></li>
+      <li><a href="https://www.sportswearcollection.com/?site=MOMFKQOXOL">Live Online Catalog</a></li> -->
+      <!-- {children.map((child) => (
+        <li><a href={child.link}>{title}</a></li>
+      ))} -->
+      <slot/>
+    </ul>
+  </li>

@@ -1,0 +1,69 @@
+@use '../util.scss';
+@import '../vars';
+
+
+
+// $color-background-dark: lighten(#151515, 12%);
+// $color-background-medium: lighten(#222, 12%);
+// $color-background-light: lighten(#1b1b1b, 12%);
+// $color-background-lighter: lighten(#1d1d1d, 12%);
+// $color-background-accent: lighten(#1a1a1a, 12%);
+// $color-background-darker: lighten(#242424, 12%);
+// $color-background-base: lighten(#131313, 12%);
+
+.banner {
+    // background:
+    //     linear-gradient(27deg, $color-background-dark 5px, transparent 5px) 0 5px,
+    //     linear-gradient(207deg, $color-background-dark 5px, transparent 5px) 10px 0px,
+    //     linear-gradient(27deg, $color-background-medium 5px, transparent 5px) 0px 10px,
+    //     linear-gradient(207deg, $color-background-medium 5px, transparent 5px) 10px 5px,
+    //     linear-gradient(90deg, $color-background-light 10px, transparent 10px),
+    //     linear-gradient($color-background-lighter 25%, $color-background-accent 25%, $color-background-accent 50%, transparent 50%, transparent 75%, $color-background-darker 75%, $color-background-darker);
+    // background-color: $color-background-base;
+    // background-size: 20px 20px;
+
+    @extend .carbon-fiber;
+
+    width: 100%;
+    min-height: 100px;
+}
+
+
+.banner-content {
+    // max-width: 800px;
+    // margin: auto;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media (max-width: $screen-lg) {
+    .banner-content {
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: $screen-md) {
+    .banner-content {
+
+        nav {
+            display: none;
+        }
+    }
+}
+
+.banner-content img {
+    margin: 5px;
+    max-width: 300px;
+    max-height: 95px;
+}
+
+// .banner-border {
+//     width: 100%;
+//     height: 7px;
+//     background-color: $ep-blue;
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+// }

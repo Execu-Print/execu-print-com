@@ -1,0 +1,106 @@
+---
+import {Gallery} from '../components/expand';
+import { Image } from 'astro:assets';
+const { alt, height = 175, images } = Astro.props as { images: string[]; alt: string};
+---
+
+<div class="gallery">
+    {images.map((image, idx) => (
+        <Gallery class="gallery-item" client:load>
+            <div slot="target" class="gallery-target">
+                <Image src={image} alt={`alt ${idx + 1}`} height={height}/>
+            </div>
+            <div slot="expand">
+                <Image src={image} alt={`alt ${idx + 1}`} />
+            </div>
+        </Gallery>
+    ))}
+    <!-- <Gallery class="gallery-item" client:load>
+        <div slot="target" class="gallery-target">
+            <Image src={img1} alt="Printing 1" height={175}/>
+        </div>
+        <div slot="expand">
+            <Image src={img1} alt="Printing 1" />
+        </div>
+    </Gallery>
+    <Gallery class="gallery-item" client:load>
+        <div slot="target" class="gallery-target">
+            <Image src={img2} alt="Printing 2" height={175}/>
+        </div>
+        <div slot="expand">
+            <Image src={img2} alt="Printing 2" />
+        </div>
+    </Gallery>
+    <Gallery class="gallery-item" client:load>
+        <div slot="target" class="gallery-target">
+            <Image src={img3} alt="Printing 3" height={175}/>
+        </div>
+        <div slot="expand">
+            <Image src={img3} alt="Printing 3" />
+        </div>
+    </Gallery>
+    <Gallery class="gallery-item" client:load>
+        <div slot="target" class="gallery-target">
+            <Image src={img4} alt="Printing 4" height={175}/>
+        </div>
+        <div slot="expand">
+            <Image src={img4} alt="Printing 4" />
+        </div>
+    </Gallery>
+    <Gallery class="gallery-item" client:load>
+        <div slot="target" class="gallery-target">
+            <Image src={img5} alt="Printing 5" height={175}/>
+        </div>
+        <div slot="expand">
+            <Image src={img5} alt="Printing 5" />
+        </div>
+    </Gallery>
+    <Gallery class="gallery-item" client:load>
+        <div slot="target" class="gallery-target">
+            <Image src={img6} alt="Printing 6" height={175}/>
+        </div>
+        <div slot="expand">
+            <Image src={img6} alt="Printing 6" />
+        </div>
+    </Gallery>
+    <Gallery class="gallery-item" client:load>
+        <div slot="target" class="gallery-target">
+            <Image src={img7} alt="Printing 7" height={175}/>
+        </div>
+        <div slot="expand">
+            <Image src={img7} alt="Printing 7" />
+        </div>
+    </Gallery>
+    <Gallery class="gallery-item" client:load>
+        <div slot="target" class="gallery-target">
+            <Image src={img8} alt="Printing 8" height={175}/>
+        </div>
+        <div slot="expand">
+            <Image src={img8} alt="Printing 8" />
+        </div>
+    </Gallery>
+    <Gallery class="gallery-item" client:load>
+        <div slot="target" class="gallery-target">
+            <Image src={img9} alt="Printing 9" height={175}/>
+        </div>
+        <div slot="expand">
+            <Image src={img9} alt="Printing 9" />
+        </div>
+    </Gallery>
+    <Gallery class="gallery-item" client:load>
+        <div slot="target" class="gallery-target">
+            <Image src={img10} alt="Printing 10" height={175}/>
+        </div>
+        <div slot="expand">
+            <Image src={img10} alt="Printing 10" />
+        </div>
+    </Gallery>
+    <Gallery class="gallery-item" client:load>
+        <div slot="target" class="gallery-target">
+            <Image src={img11} alt="Printing 11" height={175}/>
+        </div>
+        <div slot="expand">
+            <Image src={img11} alt="Printing 11" />
+        </div>
+    </Gallery> -->
+</div>

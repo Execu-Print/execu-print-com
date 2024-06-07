@@ -1,0 +1,27 @@
+@use '../util.scss';
+// @import './vars';
+
+.footer {
+    width: 100%;
+    display: flex;
+	flex-direction: column;
+	align-items: stretch;
+    @extend .carbon-fiber;
+
+    color: white;
+    padding: 10px;
+}
+
+.footer-row {
+    display: flex;
+	justify-content: space-around;
+    margin: 5px;
+}
+
+.footer-util {
+    flex-wrap: wrap;
+}
+
+.footer-social-mat-icon {
+    font-size: 56px;
+}

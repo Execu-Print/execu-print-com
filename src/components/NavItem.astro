@@ -1,0 +1,18 @@
+---
+const { link, title } = Astro.props;
+---
+
+<li><a href={link}>{title}</a></li>
+
+
+<style lang="scss">
+    // @import '../styles/vars';
+    // a:hover {
+    //     background-color: $ep-pink;
+    // }
+
+    a {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+</style>

@@ -1,0 +1,52 @@
+@import '../vars';
+
+	.row {
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+        text-align: center;
+	}
+	h1 {
+		color: $ep-blue;
+        font-size: 3em;
+	}
+
+.promo-row img {
+    max-width: 95%;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    max-width: 240px;
+    align-items: center;
+    padding: 15px;
+}
+
+.services-row {
+    flex-wrap: wrap;
+}
+
+.service img {
+    margin-bottom: 5px;
+}
+
+.service p {
+    text-align: center;
+}
+
+.service label {
+    font-weight: bold;
+}
+
+.service-apparel label {
+    color: $ep-blue;
+}
+
+.service-printing label {
+    color: $ep-pink;
+}
+
+.service-signs label {
+    color: $ep-yellow;
+}
