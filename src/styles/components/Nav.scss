@@ -159,3 +159,16 @@ nav {
     }
   }
 }
+
+.fab-menu {
+  display: none;
+}
+
+@media (max-width: $screen-md) {
+      nav {
+          display: none;
+      }
+      .fab-menu {
+        display: unset;
+      }
+}

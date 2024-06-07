@@ -23,15 +23,6 @@
     }
 }
 
-@media (max-width: $screen-md) {
-    .banner-content {
-
-        nav {
-            display: none;
-        }
-    }
-}
-
 .banner-content img {
     margin: 5px;
     max-width: 300px;

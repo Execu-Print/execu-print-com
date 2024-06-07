@@ -2,6 +2,7 @@
 import '../styles/components/Nav.scss';
 import NavItem from './NavItem.astro';
 import NavDropdown from './NavDropdown.astro';
+import {FabMenu} from '../components/fab-menu';
 
 interface MenuItem {
   link: string;
@@ -49,3 +50,5 @@ const menu: (MenuItem | MenuDropdown)[] = [
       ))}
     </ul>
   </nav>
+
+<FabMenu class="fab-menu" items={menu} client:load/>
