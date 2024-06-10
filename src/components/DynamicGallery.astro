@@ -11,13 +11,13 @@ const images = allImages.filter(img =>img && img.default && img.default.src && i
 
 <div class="gallery">
     {images.map((img, idx) => (
-        <Gallery class="gallery-item" client:load>
+        <Expand class="gallery-item" client:load>
             <div slot="target" class="gallery-target">
                 <Image src={img.default} alt={`alt ${idx + 1}`} height={height}/>
             </div>
             <div slot="expand">
                 <Image src={img.default} alt={`alt ${idx + 1}`} />
             </div>
-        </Gallery>
+        </Expand>
     ))}
 </div>
