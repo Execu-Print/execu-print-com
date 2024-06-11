@@ -42,6 +42,9 @@ static properties = {
 
     private toggle() {
         this.isOpen = !this.isOpen;
+        if (window) {
+            window.track('Toggle image');
+        }
     }
 }
 customElements.define('gallery-expand', Expand);
