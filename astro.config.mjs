@@ -5,5 +5,13 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [lit(), mdx()]
+  integrations: [lit(), mdx()],
+  server: {
+		headers: {
+			"Access-Control-Allow-Origin": "*"
+		},
+    cors: {
+      origin: false
+  }
+	},
 });

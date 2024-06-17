@@ -1,5 +1,6 @@
 ---
 import Layout from './Layout.astro';
+import { ContactForm } from '../components/contact-form';
 
 interface Props {
 	frontmatter: {
@@ -19,6 +20,7 @@ const { title, email = 'customerservice@execu-print.com' } = Astro.props.frontma
             <h3>Phone: <a href="tel:262-367-0390">262-367-0390</a></h3>
             <h3>Email: <a href={email}>{email}</a></h3>
         </div>
+        <ContactForm client:load/>
     </div>
 </Layout>
 <style lang="scss">
