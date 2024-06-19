@@ -7,9 +7,13 @@ import paperImg from '../img/home/paper.png';
 import signImg from '../img/home/sign.png';
 import vanImg from '../img/home/van.png';
 import '../styles/pages/home.scss';
+const frontmatter = {
+	title: '',
+	description: 'Local Hartland Printing and Sign Shop, Banners, Vehicle Graphics, Apparel, Oconomowoc, Pewaukee, Delafield, Waukesha, Milwaukee, Wisconsin.'
+}
 ---
 
-<Layout title="">
+<Layout frontmatter={frontmatter}>
 	<div class="row promo-row">
 			<Image src={landingImg} alt="Execu Pring landing" />
 	</div>

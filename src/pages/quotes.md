@@ -1,8 +1,8 @@
 ---
 layout: ../layouts/MarkdownLayout.astro
 title: Quotes & Pricing
-author: Himanshu
-description: Find out what makes Astro awesome!
+author: Aris Husanu
+description: Quote your project today. Contact us for comprehensive pricing on whatever you need. Printing, Vehicle Graphics, Vehicle Wraps, T-shirt printing, Embroidery
 ---
 
 **To allow us to quote your project more accurately, please provide the following information about your project:**
@@ -66,7 +66,7 @@ All sales final.
 - Quantity
 - Bindery/Finishing needs (Fold, Staple, Other)
 
-*If you’re providing artwork and are unsure about our requirements, please [click here](/artwork-guidelines-requirements).*
+*If you're providing artwork and are unsure about our requirements, please [click here](/artwork-guidelines-requirements).*
 
 *If you need a logo or graphics designed, our staff has years of experience and can design something for you.*
 

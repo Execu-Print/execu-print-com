@@ -4,21 +4,48 @@ import Footer from '../components/Footer.astro';
 import { Umami } from 'astro-analytics';
 
 interface Props {
-	title: string;
+	frontmatter: {
+		description?: string;
+		tags?: string;
+		title: string;
+	}
+
 }
 
-const { title } = Astro.props;
+const { title, description, tags } = Astro.props.frontmatter;
+
+const fullURL = `https://execu-print.husanu.com${Astro.url.pathname}`;
+const metaDescription = (tags || description)
+		? ((tags || description) + ' | ExecuPrint - Hartland, WI')
+		: ("ExecuPrint Signs & Graphics - Hartland, WI - " + (title || 'Home'))
+
+const metaTitle = `${title ? `${title} - `: ''}ExecuPrint | Hartland, WI`
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={metaDescription} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>ExecuPrint{title ? ` - ${title}`: ''}</title>
+		<title>{metaTitle}</title>
+		<link rel="sitemap" href="/sitemap-index.xml" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={fullURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:image" content="http://execu-print.com/wp-content/uploads/2019/11/logo-icon-white.png" />
+		<meta property="og:description" content={description} />
+
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content={fullURL}>
+		<meta name="twitter:creator" content={fullURL}>
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="http://execu-print.com/wp-content/uploads/2019/11/logo-icon-white.png" />
+
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">

@@ -2,7 +2,7 @@
 layout: ../layouts/MarkdownLayout.astro
 title: Contact Us
 author: Aris Husanu
-description: Find out what makes Astro awesome!
+description: Contact us through email, phone, fax, or our website form. Located in Hartland, WI near Waukesha, Oconomowoc, Delafield, Pewaukee, west of Milwaukee, Wisconsin
 ---
 
 **Phone: 262-367-0390**

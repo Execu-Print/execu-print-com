@@ -10,7 +10,7 @@ interface Props {
 const { title, email = 'customerservice@execu-print.com' } = Astro.props.frontmatter;
 ---
 
-<Layout title={title}>
+<Layout title={title} frontmatter={Astro.props.frontmatter}>
     <div class="markdown-content">
         <h1>{title}</h1>
         <hr/>
