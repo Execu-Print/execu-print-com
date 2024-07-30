@@ -71,5 +71,3 @@ All sales final.
 *If you need a logo or graphics designed, our staff has years of experience and can design something for you.*
 
 *Visit our ["Design Page"](/design) for more information.*
-
-**[Vendors](http://www.execu-print.com/wp-admin)**

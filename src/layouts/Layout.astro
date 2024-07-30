@@ -14,7 +14,7 @@ interface Props {
 
 const { title, description, tags } = Astro.props.frontmatter;
 
-const fullURL = `https://execu-print.husanu.com${Astro.url.pathname}`;
+const fullURL = `https://execu-print.com${Astro.url.pathname}`;
 const metaDescription = (tags || description)
 		? ((tags || description) + ' | ExecuPrint - Hartland, WI')
 		: ("ExecuPrint Signs & Graphics - Hartland, WI - " + (title || 'Home'))

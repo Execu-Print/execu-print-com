@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://execu-print.husanu.com',
+  site: 'https://execu-print.com',
   integrations: [lit(), mdx(), sitemap()],
   server: {
     headers: {
