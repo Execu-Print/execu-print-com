@@ -1,13 +1,13 @@
 // @use './vars.scss';
 @import './vars';
 
-$carbon-fiber-dark: lighten(#151515, 12%);
-$carbon-fiber-medium: lighten(#222, 12%);
-$carbon-fiber-light: lighten(#1b1b1b, 12%);
-$carbon-fiber-lighter: lighten(#1d1d1d, 12%);
-$carbon-fiber-accent: lighten(#1a1a1a, 12%);
-$carbon-fiber-darker: lighten(#242424, 12%);
-$carbon-fiber-base: lighten(#131313, 12%);
+$carbon-fiber-dark: mix(red, lighten(#151515, 12%), 3%);
+$carbon-fiber-medium: mix(red, lighten(#222, 12%), 3%);
+$carbon-fiber-light: mix(red, lighten(#1b1b1b, 12%), 3%);
+$carbon-fiber-lighter: mix(red, lighten(#1d1d1d, 12%), 3%);
+$carbon-fiber-accent: mix(red, lighten(#1a1a1a, 12%), 3%);
+$carbon-fiber-darker: mix(red, lighten(#242424, 12%), 3%);
+$carbon-fiber-base: mix(red, lighten(#131313, 12%), 3%);
 
 .carbon-fiber {
     background:

@@ -13,7 +13,7 @@ description: Contact us through email, phone, fax, or our website form. Located 
 
 **Please feel free to contact us:**
 
-7:30am to 5:00pm Monday-Fridays
+7:30am to 5:00pm Monday-Friday
 
 > ---
 
