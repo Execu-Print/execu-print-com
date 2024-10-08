@@ -6,4 +6,4 @@ description: Contact us through email, phone, fax, or our website form. Located 
 ---
 
 
-<iframe src="https://www.sportswearcollection.com/?site=MOMFKQOXOL"></iframe>
+<iframe class="catalog-frame" src="https://www.sportswearcollection.com/?site=MOMFKQOXOL"></iframe>

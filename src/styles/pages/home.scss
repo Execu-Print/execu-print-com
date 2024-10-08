@@ -50,3 +50,15 @@
 .service-signs label {
     color: $ep-yellow;
 }
+
+.info-banner {
+    background-color: $ep-yellow;
+    min-width: 50%;
+    padding: 10px;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+}
