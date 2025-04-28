@@ -5,7 +5,7 @@ const { alt, height = 175, path } = Astro.props;
 
 const allImages = await Astro.glob('/src/img/**/*.jpg');
 
-const images = allImages; //.filter(img =>img && img.default && img.default.src && img.default.src.includes(path));
+const images = allImages.filter(img =>img && img.default && img.default.src && img.default.src.includes(path));
 
 ---
 
