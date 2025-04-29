@@ -3,7 +3,8 @@ import { LitElement, css, html } from "lit";
 export class Expand extends LitElement {
 
 static properties = {
-    isOpen: { type: Boolean }
+    isOpen: { type: Boolean },
+    _resizeOnShowTimeoutToken: {type: Number}
   };
 
   constructor() {
@@ -34,8 +35,12 @@ static properties = {
 
     override render() {
         if (this.isOpen) {
-            return html`<div class="wrapper"><slot name="target"></slot></div>
-            <div class="backdrop" @click="${this.toggle}"><slot name="expand"></slot></div>`;
+            return html`<div class="wrapper">
+                <slot name="target"></slot>
+            </div>
+            <div class="backdrop" @click="${this.toggle}">
+                <slot name="expand"></slot>
+            </div>`;
         }
         return html`<div class="wrapper" @click="${this.toggle}"><slot name="target"></slot></div>`;
     }
@@ -43,7 +48,39 @@ static properties = {
     private toggle() {
         this.isOpen = !this.isOpen;
         if (window) {
-            window.track('Toggle image');
+            try {
+                window.track('Toggle image');
+            } catch (e) {
+                console.debug('Error logging from expand', e)
+            }
+
+        }
+
+        console.log('toggling', this.isOpen)
+
+        if (this.isOpen) {
+            this._resizeOnShowTimeoutToken = setTimeout(this._resizeOnShow, 100)
+        } else {
+            clearTimeout(this._resizeOnShowTimeoutToken)
+        }
+
+    }
+
+    private _resizeOnShow = () => {
+        const slot = this.shadowRoot.querySelector('slot[name="expand"]');
+        const children = slot?.assignedElements();
+
+        const img = children[0]?.querySelector('.expanded-image');
+
+        if (img) {
+            const { height, width } = img;
+            const {innerHeight, innerWidth} = window;
+            const imgAspectRatio = width / height;
+            const browserAspectRatio = innerWidth / innerHeight;
+
+            if (imgAspectRatio < browserAspectRatio) {
+                img.classList.add('imgTooTall')
+            }
         }
     }
 }

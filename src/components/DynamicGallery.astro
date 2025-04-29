@@ -17,7 +17,7 @@ const images = allImages.filter(img =>img && img.default && img.default.src && i
                 <Image src={img.default} alt={`alt ${idx + 1}`} height={height}/>
             </div>
             <div slot="expand">
-                <Image src={img.default} alt={`alt ${idx + 1}`} />
+                <Image class="expanded-image" src={img.default} alt={`alt ${idx + 1}`} />
             </div>
         </Expand>
     ))}
