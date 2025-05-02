@@ -93,7 +93,32 @@ const metaTitle = `${title ? `${title} - `: ''}Printing and Graphics | Full serv
 					groups: `groups/`,
 				},
 			});
+
+			window.onloadTurnstileCallback = function () {
+				try {
+					console.log('Turnstile loaded')
+					window.turn = turnstile;
+					// turnstile.render("#example-container", {
+					// 	sitekey: "<YOUR_SITE_KEY>",
+					// 	callback: function (token) {
+					// 	console.log(`Challenge Success ${token}`);
+					// 	},
+					// });
+				} catch (e) {
+					console.log('error loading turnsite', e)
+				}
+			};
 		</script>
+
+		<!-- <script
+			src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+			defer
+		></script> -->
+		<script
+			src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"
+			defer
+			is:inline
+		></script>
 	</head>
 	<body>
 		<!-- <Umami id="dfddd9c4-bce1-412d-b554-1484e0222d0b" src="https://cloud.umami.is/script.js" /> -->

@@ -21,6 +21,11 @@ const { title, email = 'customerservice@execu-print.com' } = Astro.props.frontma
             <h3>Email: <a href={email}>{email}</a></h3>
         </div>
         <ContactForm client:load/>
+        <div
+          id="turnstile-target"
+          class="___turnstile-target"
+          data-sitekey="0x4AAAAAABXgOp55dr-OXNph"
+        ></div>
     </div>
 </Layout>
 <style lang="scss">
